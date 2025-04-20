@@ -1,0 +1,45 @@
+{
+    "name": "esbuild-node-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently \"pnpm esbuild\" \" pnpm serve\"",
+        "esbuild": "node scripts/esbuild.dev.js",
+        "build": "prisma migrate deploy && prisma generate && node scripts/esbuild.build.js",
+        "serve": "nodemon --watch build/index.js",
+        "prisma": "prisma",
+        "studio": "prisma studio",
+        "db:update": "prisma migrate dev && prisma generate",
+        "vercel-build": "prisma generate && node scripts/esbuild.build.js",
+        "generate:data": "node prisma/seed/generateMockData.js",
+        "db:seed": "node prisma/seed/seed.cjs",
+        "postinstall": "pnpm db:update",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@apollo/server": "^4.12.0",
+        "@graphql-tools/merge": "^9.0.24",
+        "@graphql-tools/schema": "^10.0.23",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "file-type": "^19.6.0",
+        "graphql-modules": "^3.0.0",
+        "graphql-scalars": "^1.24.2"
+    },
+    "devDependencies": {
+        "@faker-js/faker": "^9.7.0",
+        "@luckycatfactory/esbuild-graphql-loader": "^3.8.1",
+        "@yao-pkg/pkg": "^6.4.0",
+        "concurrently": "^9.1.2",
+        "esbuild": "^0.25.2",
+        "esbuild-copy-static-files": "^0.1.0",
+        "esbuild-node-externals": "^1.18.0",
+        "esbuild-plugin-path-alias": "^1.0.7",
+        "nodemon": "^3.1.9"
+    }
+}
