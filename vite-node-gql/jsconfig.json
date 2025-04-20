@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@perf-gql/*": [
+                "./*"
+            ],
+            "@perf-server/*": [
+                "./node_modules/@perf/server/*"
+            ],
+        }
+    },
+    "include": [
+        "./**/*"
+    ],
+    "exclude": [
+        "node_modules",
+    ]
+}
