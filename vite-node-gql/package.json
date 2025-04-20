@@ -8,6 +8,8 @@
     "dev": "cross-env NODE_ENV=development nodemon main.js",
     "build": "vite build",
     "start": "cross-env NODE_ENV=production node dist/server.js",
+    "ncc:build":"ncc build server.js -o ncc-dist",
+    "compile": "bun ncc:build && bun build ncc-dist/index.js --minify --sourcemap --compile --outfile server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
