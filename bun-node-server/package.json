@@ -1,0 +1,37 @@
+{
+  "name": "bun-node-server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon .dev/main.js",
+    "build:dev": "bun scripts/bun.dev.js",
+    "build": "bun scripts/bun.build.js",
+    "package:bun": "bun build build/main.js --minify --compile --outfile main",
+    "compile:bun": "bun run build && bun run package:bun",
+    "package:pkg": "pkg build/main.js -t node22",
+    "compile:pkg": "bun run build && bun run package:pkg",
+    "start": "node build/main.js"
+  },
+  "nodemonConfig": {
+    "ext": "js, jsx, json, gql, graphql",
+    "watch": [
+      "."
+    ]
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.4.0",
+    "bun": "^1.2.10",
+    "bun-graphql-loader": "^1.0.3",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.12.0",
+    "@graphql-tools/merge": "^9.0.24",
+    "@graphql-tools/schema": "^10.0.23",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "graphql-modules": "^3.0.0",
+    "graphql-scalars": "^1.24.2"
+  }
+}
