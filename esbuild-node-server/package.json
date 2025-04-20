@@ -16,6 +16,10 @@
         "generate:data": "node prisma/seed/generateMockData.js",
         "db:seed": "node prisma/seed/seed.cjs",
         "postinstall": "pnpm db:update",
+
+        "package:bun": "bun build build/index.js --minify --compile --outfile esbuld-server",
+        "compile:bun": "pnpm run build && pnpm run package:bun",
+        "start": "node build/main.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],

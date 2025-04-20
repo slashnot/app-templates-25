@@ -10,7 +10,7 @@ await esbuild.build({
     platform: 'node',
     format: 'esm',
     target: ['node20.12'],
-    packages: 'external',
+    packages: 'bundle',
     sourcemap: true,
     outfile: 'build/index.js',
     plugins: [
