@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "concurrently \"pnpm esbuild\" \" pnpm serve\"",
         "esbuild": "node scripts/esbuild.dev.js",
-        "build": "prisma migrate deploy && prisma generate && node scripts/esbuild.build.js",
+        "build": "prisma generate && prisma db push && node scripts/esbuild.build.js",
         "serve": "nodemon --watch build/index.js",
         "prisma": "prisma",
         "studio": "prisma studio",
@@ -25,6 +25,7 @@
         "@apollo/server": "^4.12.0",
         "@graphql-tools/merge": "^9.0.24",
         "@graphql-tools/schema": "^10.0.23",
+        "@prisma/client": "6.6.0",
         "cors": "^2.8.5",
         "express": "^4.21.2",
         "file-type": "^19.6.0",
@@ -40,6 +41,7 @@
         "esbuild-copy-static-files": "^0.1.0",
         "esbuild-node-externals": "^1.18.0",
         "esbuild-plugin-path-alias": "^1.0.7",
-        "nodemon": "^3.1.9"
+        "nodemon": "^3.1.9",
+        "prisma": "6.6.0"
     }
 }
