@@ -11,7 +11,7 @@
         "serve": "nodemon --watch build/index.js",
         "prisma": "prisma",
         "studio": "prisma studio",
-        "db:update": "prisma migrate dev && prisma generate",
+        "db:update": "prisma generate && prisma db push",
         "vercel-build": "prisma generate && node scripts/esbuild.build.js",
         "generate:data": "node prisma/seed/generateMockData.js",
         "db:seed": "node prisma/seed/seed.cjs",
