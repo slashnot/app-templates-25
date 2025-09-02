@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - esbuild
+
+overrides:
+  '@refinedev/react-router-7': link:C:/Users/slash/AppData/Local/pnpm/global/5/node_modules/@refinedev/react-router-7
+  publish: link:C:/Users/slash/AppData/Local/pnpm/global/5/node_modules/publish
