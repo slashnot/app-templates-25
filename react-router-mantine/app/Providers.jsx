@@ -1,8 +1,12 @@
-import { MantineProvider, createTheme } from '@mantine/core';
+import { MantineProvider, createTheme, Button } from '@mantine/core';
+import classes from "@app/theme/variants.module.css";
 
 const theme = createTheme({
-  fontFamily: 'Roboto, sans-serif',
+  fontFamily: 'Poppins, sans-serif',
   primaryColor: 'indigo',
+  components: {
+    Button: Button.extend({ classNames: classes }),
+  }
 });
     
 const Providers = ({ children }) => {

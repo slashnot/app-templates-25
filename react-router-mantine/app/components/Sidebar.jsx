@@ -3,7 +3,7 @@ import classes from "./Sidebar.module.css"
 
 const navigationItems = [
     { name: 'Home', icon: 'icon-[heroicons--chart-bar] w-5 h-5 mr-3', href: '/', active: true },
-    { name: 'Simple Ollama', icon: 'icon-[heroicons--folder] w-5 h-5 mr-3', href: '/simple-ollama', active: false },
+    { name: 'About', icon: 'icon-[heroicons--folder] w-5 h-5 mr-3', href: '/about', active: false },
     { name: 'Analytics', icon: 'icon-[heroicons--chart-bar-square] w-5 h-5 mr-3', href: '/analytics', active: false },
     { name: 'Team', icon: 'icon-[heroicons--users] w-5 h-5 mr-3', href: '/team', active: false },
     { name: 'Settings', icon: 'icon-[heroicons--cog-6-tooth] w-5 h-5 mr-3', href: '/settings', active: false },
@@ -46,7 +46,7 @@ const Sidebar = () => {
                             className={({ isActive }) =>
                                 `${classes['nav-item']} flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 
                                     ${isActive
-                                    ? 'bg-indigo-500 text-white shadow-md'
+                                    ? `${classes.active} bg-indigo-600 text-white font-[500]`
                                     : 'text-slate-700 hover:bg-slate-200 hover:text-slate-900'
                                 }`
                             }

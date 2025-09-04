@@ -1,3 +1,6 @@
+/* https://tailwindcss.com/docs/functions-and-directives#reference-directive */
+@reference "tailwindcss";
+
 /* Sidebar Custom Styles */
 .sidebar {
   /* Custom scrollbar for the sidebar */
@@ -41,9 +44,12 @@
 }
 
 @keyframes subtle-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.02);
   }
@@ -55,9 +61,12 @@
 }
 
 @keyframes status-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -65,7 +74,11 @@
 
 /* Hover effect for navigation items */
 .sidebar .nav-item:hover {
-  transform: translateX(4px);
+  /* transform: translateX(4px); */
+  @apply bg-slate-200 text-indigo-500 font-[500];
+  &.active{
+    @apply bg-indigo-700 text-white;
+  }
 }
 
 /* Mobile responsiveness */
@@ -79,7 +92,7 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .sidebar.mobile-open {
     transform: translateX(0);
   }
