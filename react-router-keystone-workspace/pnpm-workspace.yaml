@@ -1,0 +1,17 @@
+packages:
+  - apps/*
+  - libs/*
+  - packages/*
+
+onlyBuiltDependencies:
+  - '@apollo/protobufjs'
+  - '@prisma/client'
+  - '@prisma/engines'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - prisma
+
+publicHoistPattern:
+  - '*'
+
+shamefullyHoist: true
