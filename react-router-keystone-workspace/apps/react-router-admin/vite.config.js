@@ -11,7 +11,8 @@ export default defineConfig({
   plugins: [reactRouter(), tailwindcss(), devtoolsJson()],
   resolve: {
     alias: {
-      "@app": path.resolve("./app"),
+      "@app/client": path.resolve("./app"),
+      "@app/keystone": path.resolve("./node_modules/@app/keystone"),
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".md"]
   }

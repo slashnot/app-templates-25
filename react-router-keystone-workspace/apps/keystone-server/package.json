@@ -1,5 +1,5 @@
 {
-  "name": "@app/server",
+  "name": "@app/keystone",
   "version": "1.0.3",
   "private": true,
   "scripts": {

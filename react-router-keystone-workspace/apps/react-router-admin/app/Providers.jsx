@@ -1,5 +1,5 @@
 import { MantineProvider, createTheme, Button } from '@mantine/core';
-import classes from "@app/theme/variants.module.css";
+import classes from "@app/client/theme/variants.module.css";
 
 const theme = createTheme({
   fontFamily: 'Poppins, sans-serif',

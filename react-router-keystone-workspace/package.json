@@ -1,5 +1,5 @@
 {
-  "name": "@app/main",
+  "name": "app-main",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

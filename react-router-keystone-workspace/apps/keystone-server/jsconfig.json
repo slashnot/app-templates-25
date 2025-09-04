@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@app/server/*": ["app/*"]
+      "@app/keystone/*": ["app/*"]
     },
     "target": "esnext",
     "module": "commonjs",
