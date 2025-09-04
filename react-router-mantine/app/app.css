@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
+@import "@mantine/core/styles.css" layer(utilities);
+@plugin "@iconify/tailwind4";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
