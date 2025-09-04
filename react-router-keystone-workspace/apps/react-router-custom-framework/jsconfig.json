@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@app/client/*": ["./app/*"],
+            "@app/keystone/*": ["./node_modules/@app/keystone/*"],
+        }
+    }
+}

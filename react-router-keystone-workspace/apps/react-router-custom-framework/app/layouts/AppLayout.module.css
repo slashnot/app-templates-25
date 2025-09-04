@@ -1,0 +1,36 @@
+.appLayout {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: auto 4fr;
+    grid-template-rows: auto 8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+
+    @media (min-width: 768px) and (max-width: 1920px) {
+        grid-template-columns: max-content 4fr;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 0 4fr;
+    }
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.header {
+    grid-area: header;
+    max-height: 6dvh;
+}
+
+.main {
+    grid-area: main;
+    overflow-x: hidden;
+    overflow-y: contain;
+}

@@ -1,0 +1,6 @@
+/* https://tailwindcss.com/docs/functions-and-directives#reference-directive */
+@reference "tailwindcss";
+
+[data-variant='filled-shadow'] {
+    @apply shadow-lg shadow-indigo-200;
+}
