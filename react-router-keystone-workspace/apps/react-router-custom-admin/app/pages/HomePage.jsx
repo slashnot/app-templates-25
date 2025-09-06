@@ -7,6 +7,7 @@ import Home from "./home.jsx";
 // ------------------------
 const HomePage = () => {
     const data = useLoaderData();
+    console.log("HomePage loaderData:", data);
 
     return (
         <div className="HomePage contents">

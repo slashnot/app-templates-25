@@ -17,7 +17,12 @@
     "postcss.config.js": true,
     "prisma.config.js": true,
     "public": true,
-    "react-router.config.js": true
+    "react-router.config.js": true,
+    "eslint.config.js": true,
+    "scripts": true,
+    "server.js": true,
+    "app/entry.client.jsx": true,
+    "app/entry.server.jsx": true,
   },
   "eslint.enable": true,
   "eslint.validate": [

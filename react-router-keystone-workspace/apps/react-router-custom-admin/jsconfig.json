@@ -2,7 +2,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@app/client/*": ["./app/*"],
+            "@app/custom-admin/*": ["./app/*"],
             "@app/keystone/*": ["./node_modules/@app/keystone/*"],
         }
     }

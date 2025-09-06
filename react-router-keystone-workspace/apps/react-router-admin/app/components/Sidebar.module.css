@@ -75,9 +75,9 @@
 /* Hover effect for navigation items */
 .sidebar .nav-item:hover {
   /* transform: translateX(4px); */
-  @apply bg-slate-200 text-indigo-500 font-[500];
+  @app/adminly bg-slate-200 text-indigo-500 font-[500];
   &.active{
-    @apply bg-indigo-700 text-white;
+    @app/adminly bg-indigo-700 text-white;
   }
 }
 

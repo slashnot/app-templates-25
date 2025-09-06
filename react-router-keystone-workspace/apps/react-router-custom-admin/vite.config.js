@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [tailwindcss(), devtoolsJson()],
   resolve: {
     alias: {
-      "@app/client": path.resolve("./app"),
+      "@app/custom-admin": path.resolve("./app"),
       "@app/keystone": path.resolve("./node_modules/@app/keystone"),
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".md"]

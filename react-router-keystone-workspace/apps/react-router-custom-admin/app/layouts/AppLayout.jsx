@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router"
 import classes from "./AppLayout.module.css"
-import Sidebar from "@app/client/components/Sidebar"
+import Sidebar from "@app/custom-admin/components/Sidebar"
 
 const AppLayout = () => {
     return (

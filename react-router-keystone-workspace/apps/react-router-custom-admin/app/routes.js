@@ -3,6 +3,7 @@ import App from "./root";
 import AppLayout from "./layouts/AppLayout";
 import HomePage from "./pages/HomePage";
 import About from "./pages/about/About";
+import { getLoader } from "@app/custom-admin/utils/api";
 
 export default [
     {
@@ -16,11 +17,7 @@ export default [
                     {
                         index: true,
                         Component: HomePage,
-                        loader: async ({ context }) => {
-                            const { db } = context;
-                            const posts = await db.Post.findMany();
-                            return { posts };
-                        },
+                        loader: ({ context }) => getLoader({ resource: "Post", context }),
                     },
                     {
                         path: "about",
