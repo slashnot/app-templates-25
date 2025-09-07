@@ -7,6 +7,7 @@ import morgan from "morgan";
 const BUILD_PATH = "./build/server/index.js";
 const DEVELOPMENT = process.env.NODE_ENV === "development";
 const PORT = Number.parseInt(process.env.PORT || "3200");
+// ------- x ---------
 
 /**
  * Creates and configures the Express application
@@ -26,6 +27,7 @@ async function createApp() {
 
   return app;
 }
+// ------- x ---------
 
 /**
  * Sets up the development server with Vite middleware
@@ -51,6 +53,7 @@ async function setupDevelopmentServer(app) {
     }
   });
 }
+// ------- x ---------
 
 /**
  * Sets up the production server with static file serving
@@ -73,10 +76,18 @@ async function setupProductionServer(app) {
   // Serve static files from build directory
   app.use(express.static("build/client", { maxAge: "1h" }));
 
-  // Load and use the production app
-  const productionApp = await import(BUILD_PATH);
-  app.use(productionApp.app);
+  // Load the production build and create request handler
+  const { createRequestHandler } = await import("@react-router/express");
+  const build = await import(BUILD_PATH);
+
+  app.use(
+    createRequestHandler({
+      build,
+      getLoadContext: async (req, res) => ({ req, res }),
+    })
+  );
 }
+// ------- x ---------
 
 /**
  * Starts the server
@@ -94,6 +105,7 @@ async function startServer() {
     process.exit(1);
   }
 }
+// ------- x ---------
 
 // Start the server
 startServer();
