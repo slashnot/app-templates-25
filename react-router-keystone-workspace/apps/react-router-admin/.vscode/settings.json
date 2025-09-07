@@ -6,7 +6,7 @@
     ".swc": true,
     "Dockerfile": true,
     "README.md": true,
-    // "app/root.jsx": true,
+    "app/root.jsx": true,
     "build": true,
     "docs": true,
     "eslint.config.js.bak": true,

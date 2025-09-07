@@ -11,7 +11,16 @@ export function meta() {
 }
 // -------- x --------
 
-export default function Home() {
+export const loader = async ({ context }) => {
+  const { db } = context;
+  const posts = await db.Post.findMany();
+  return { posts };
+}
+// -------- x --------
+
+export default function Home({loaderData}) {
+  console.log("Loader Data:", loaderData);
+
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <div className=" bg-indigo-50/10 p-16 rounded-2xl border border-indigo-200/75 shadow-md shadow-indigo-300/20">

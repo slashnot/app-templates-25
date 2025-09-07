@@ -1,22 +1,30 @@
 {
-  "name": "@app/admin/admin",
+  "name": "@app/admin",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js"
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "start": "node server.js",
+    "dev:react": "vite",
+    "start:react": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
+    "@app/keystone": "workspace:^",
     "@mantine/core": "^8.2.8",
     "@mantine/form": "^8.2.8",
     "@mantine/hooks": "^8.2.8",
     "@mantine/notifications": "^8.2.8",
+    "@react-router/express": "^7.8.2",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
     "@tailwindcss/vite": "^4.1.12",
+    "body-parser": "^2.2.0",
     "clsx": "^2.1.1",
+    "compression": "^1.8.1",
+    "express": "^5.1.0",
     "isbot": "^5.1.27",
+    "morgan": "^1.10.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.1",

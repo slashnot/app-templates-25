@@ -2,6 +2,10 @@
   "name": "@app/keystone",
   "version": "1.0.3",
   "private": true,
+  "exports": {
+    "./core/context": "./core/context.js",
+    "./core/context.js": "./core/context.js"
+  },
   "scripts": {
     "dev": "keystone dev",
     "start": "cross-env NODE_ENV=production keystone start",
