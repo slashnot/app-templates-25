@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@app/*": ["./app/*"],
+            "@server/*": ["./server/*"],
+            "@common/ui/*": ["node_modules/@common/ui/src/*"],
+        }
+    },
+    "include": ["app/**/*"]
+}

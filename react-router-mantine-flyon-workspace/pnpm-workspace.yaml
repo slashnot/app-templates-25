@@ -1,0 +1,18 @@
+packages:
+  - apps/*
+  - common/*
+  - servers/*
+
+publicHoistPattern:
+  - "*"
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - prisma
+  - "@prisma/client"
+  - "@prisma/engines"
+  - "@swc/core"
+  - better-sqlite3
+  - esbuild
+  - msgpackr-extract
+  - "@apollo/protobufjs"

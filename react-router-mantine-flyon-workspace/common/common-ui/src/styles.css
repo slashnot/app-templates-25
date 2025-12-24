@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "flyonui/variants.css";
+@source "flyonui/flyonui.js";
+@plugin "@iconify/tailwind4";
+@custom-variant hover (&:hover);
+@plugin "flyonui" {
+  themes: light --default, dark --prefersdark, slashnot;
+}
+
+@import "./themes/slashnot.css";
+
+:root,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-active {
+  --menu-active-bg: var(--color-primary-light);
+  --menu-active-fg: var(--color-primary-content);
+  font-weight: 600;
+}

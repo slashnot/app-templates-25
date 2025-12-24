@@ -1,0 +1,31 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "neutralinojs.log": true,
+        "pnpm-lock.yaml": true,
+        "README.md": true,
+        "postcss.config.js": true,
+        "Dockerfile": true,
+        ".gitignore": true,
+        ".dockerignore": true,
+        "node_modules": true,
+        ".vscode": true,
+        ".react-router": true,
+        "eslint.config.js": true
+    },
+    "hide-files.files": [
+        "README.md",
+        "postcss.config.js",
+        "Dockerfile",
+        ".gitignore",
+        ".dockerignore",
+        "node_modules",
+        ".vscode",
+        ".react-router",
+        "eslint.config.js"
+    ]
+}

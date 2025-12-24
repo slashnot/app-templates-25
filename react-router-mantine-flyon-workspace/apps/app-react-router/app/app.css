@@ -1,0 +1,16 @@
+@import "../node_modules/@common/ui/src/styles.css";
+@source "../node_modules/@common/ui/";
+:root,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-active {
+    --menu-active-bg: var(--color-primary-light);
+    --menu-active-fg: var(--color-primary-content);
+    font-weight: 600;
+  }
