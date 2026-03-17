@@ -9,13 +9,4 @@
         "pnpm-lock.yaml": true
     },
     "hide-files.files": []
-} // {
-//     "files.exclude": {
-//         "node_modules": true,
-//         ".gitignore": true,
-//         "jsconfig.json": true,
-//         "eslint.config.js": true,
-//         "dist": true,
-//         "vite.config.js": true
-//     }
-// }
+}

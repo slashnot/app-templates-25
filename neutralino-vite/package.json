@@ -1,0 +1,20 @@
+{
+  "name": "neutralinojs-vite-react-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "neu:update": "neu update",
+    "dev": "neu run",
+    "build": "neu build",
+    "dist": "neu build --release",
+    "postinstall": "neu update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neutralinojs/neu": "^11.7.0"
+  },
+  "packageManager": "bun@1.3.10"
+}
