@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { filesystem } from "@neutralinojs/lib";
-import { useStore } from './store.js'
+import { useSelector, useStore } from './store.js'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -8,6 +8,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useStore("count")
+  const user = useSelector(state => state.user)
 
   useEffect(() => {
     filesystem
@@ -43,7 +44,7 @@ function App() {
         <div>
           <h1>Get started</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            <strong>User: {user.name}</strong>
           </p>
         </div>
         <div className='button-group'>
