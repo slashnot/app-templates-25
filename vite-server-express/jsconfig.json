@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@graphql/*": ["./graphql/*"],
+            "@prisma/*": ["./prisma/client/*"]
+        }
+    }
+}

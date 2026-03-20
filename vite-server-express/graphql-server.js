@@ -3,7 +3,7 @@ import { ApolloServer } from '@apollo/server';
 import express from 'express';
 import cors from 'cors';
 import { expressMiddleware } from '@as-integrations/express5';
-import { schema } from "./graphql"
+import { schema } from "@graphql"
 
 // ---------------------------------
 // Server Init Function

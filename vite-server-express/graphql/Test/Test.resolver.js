@@ -1,5 +1,6 @@
 import TestDef from "./Test.gql"
 import { taffy } from "../../taffy"
+import { prisma } from "../../prisma/client/prisma"
 
 let usersDb = taffy([]);
 let postsDb = taffy([]);
@@ -29,7 +30,7 @@ await init()
 
 const Query = {
     Users: async () => {
-        return usersDb().get()
+        return await prisma.user.findMany()
     },
     Posts: async () => {
         return postsDb().get()
